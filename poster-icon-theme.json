@@ -1,0 +1,13 @@
+{
+  "iconDefinitions": {
+    "poster-file-icon": {
+      "iconPath": "./icons/poster-icon.png"
+    }
+  },
+  "fileExtensions": {
+    "poster": "poster-file-icon"
+  },
+  "fileNames": {},
+  "folderNames": {},
+  "folderNamesExpanded": {}
+}

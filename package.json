@@ -1,0 +1,30 @@
+{
+  "name": "poster-highlight",
+  "displayName": "Poster Highlight",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "poster",
+      "aliases": ["Poster", "poster"],
+      "extensions": ["poster", ".poster"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "poster",
+      "scopeName": "source.poster",
+      "path": "./syntaxes/poster.tmLanguage.json"
+    }],
+    "iconThemes": [{
+      "id": "poster-icons",
+      "label": "Poster Icons",
+      "path": "./poster-icon-theme.json"
+    }]
+  }
+}

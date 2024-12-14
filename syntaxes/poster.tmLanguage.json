@@ -1,0 +1,89 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "poster",
+  "patterns": [
+    {
+      "include": "text.xml" 
+    },
+    {
+      "include": "#expressions"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    }
+  ],
+  "repository": {
+    "expressions": {
+			"patterns": [
+				{
+					"name": "meta.expression.braces.poster",
+					"begin": "(\\{\\{)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.braces.poster"
+						}
+					},
+					"end": "(\\}\\})",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.definition.braces.poster"
+						}
+					},
+					"patterns": [
+						{
+							"name": "support.function.expr.poster",
+							"match": "\\b(expr|later)\\b"
+						},
+						{
+							"name": "string.quoted.single.poster",
+							"begin": "'",
+							"end": "'"
+						},
+						{
+							"name": "string.quoted.double.poster",
+							"begin": "\"",
+							"end": "\""
+						},
+						{
+							"name": "keyword.operator.ternary.poster",
+							"match": "\\?|:"
+						},
+						{
+							"name": "constant.numeric.poster",
+							"match": "\\b\\d+\\b"
+						},
+						{
+							"name": "variable.other.poster",
+							"match": "\\b[a-zA-Z_$][a-zA-Z0-9_$]*\\b"
+						}
+					]
+				}
+			]
+		}
+		,
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.poster",
+          "match": "\\b(if|while|for|return)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.poster",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.poster",
+          "match": "\\\\."
+        }
+      ]
+    }
+  },
+  "scopeName": "source.poster",
+  "fileTypes": [".poster"]
+}
