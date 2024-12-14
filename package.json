@@ -2,6 +2,10 @@
   "name": "poster-highlight",
   "displayName": "Poster Highlight",
   "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flyersar/poster-highlight.git"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.96.0"
